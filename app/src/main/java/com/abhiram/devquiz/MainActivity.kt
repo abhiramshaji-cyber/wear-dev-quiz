@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -35,6 +36,10 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.material.Text
 import kotlinx.coroutines.delay
+
+// A centered box this fraction of the diameter, square, fits entirely inside the circle:
+// (f/2)^2 + (f/2)^2 <= (1/2)^2 holds for f up to 0.707.
+private const val SAFE_FRACTION = 0.70f
 
 private val Ink = Color(0xFF000000)
 private val Card = Color(0xFF17171C)
@@ -79,39 +84,42 @@ fun QuizScreen(vm: QuizViewModel = viewModel()) {
             ),
         contentAlignment = Alignment.Center,
     ) {
+        // The glass is a circle inside a square framebuffer, so the scroll viewport is capped
+        // to the inscribed square. Overflow scrolls INSIDE this box rather than sliding text
+        // up into the corners, where the circle is only a few pixels wide.
         Column(
             modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(scroll)
-                .padding(horizontal = 20.dp, vertical = 12.dp),
+                .fillMaxWidth(SAFE_FRACTION)
+                .fillMaxHeight(SAFE_FRACTION)
+                .verticalScroll(scroll),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {
             Header(q.topic, vm.right, vm.asked, vm.accuracy)
-            Spacer(Modifier.height(8.dp))
+            Spacer(Modifier.height(6.dp))
             Text(
                 text = q.prompt,
                 color = Color(0xFFF2F2F4),
-                fontSize = 14.5.sp,
-                lineHeight = 18.sp,
+                fontSize = 13.5.sp,
+                lineHeight = 17.sp,
                 fontWeight = FontWeight.Medium,
                 textAlign = TextAlign.Center,
             )
-            Spacer(Modifier.height(9.dp))
+            Spacer(Modifier.height(8.dp))
 
             val top = if (vm.correctOnTop) q.correct else q.wrong
             val bottom = if (vm.correctOnTop) q.wrong else q.correct
-            Option(top, vm.correctOnTop, vm.verdict) { vm.answer(vm.correctOnTop) }
+            Option(top, vm.correctOnTop, vm.verdict, { vm.answer(vm.correctOnTop) }, vm::advance)
             Spacer(Modifier.height(6.dp))
-            Option(bottom, !vm.correctOnTop, vm.verdict) { vm.answer(!vm.correctOnTop) }
+            Option(bottom, !vm.correctOnTop, vm.verdict, { vm.answer(!vm.correctOnTop) }, vm::advance)
 
             if (vm.verdict == Verdict.WRONG) {
                 Spacer(Modifier.height(8.dp))
                 Text(
                     text = q.why,
                     color = Color(0xFFB9B9C4),
-                    fontSize = 12.5.sp,
-                    lineHeight = 16.sp,
+                    fontSize = 11.5.sp,
+                    lineHeight = 15.sp,
                     textAlign = TextAlign.Center,
                 )
                 Spacer(Modifier.height(7.dp))
@@ -145,7 +153,13 @@ private fun Header(topic: Topic, right: Int, asked: Int, accuracy: Int) {
 }
 
 @Composable
-private fun Option(text: String, isCorrect: Boolean, verdict: Verdict, onClick: () -> Unit) {
+private fun Option(
+    text: String,
+    isCorrect: Boolean,
+    verdict: Verdict,
+    onPick: () -> Unit,
+    onContinue: () -> Unit,
+) {
     val revealed = verdict != Verdict.NONE
     val fill = when {
         revealed && isCorrect -> Right
@@ -166,15 +180,15 @@ private fun Option(text: String, isCorrect: Boolean, verdict: Verdict, onClick: 
             .fillMaxWidth()
             .clip(RoundedCornerShape(17.dp))
             .background(bg)
-            .clickable(enabled = !revealed, onClick = onClick)
-            .padding(horizontal = 12.dp, vertical = 9.dp),
+            .clickable { if (revealed) onContinue() else onPick() }
+            .padding(horizontal = 10.dp, vertical = 8.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
             text = text,
             color = fg,
-            fontSize = 13.sp,
-            lineHeight = 16.sp,
+            fontSize = 12.sp,
+            lineHeight = 15.sp,
             fontWeight = FontWeight.SemiBold,
             textAlign = TextAlign.Center,
         )
