@@ -83,26 +83,26 @@ fun QuizScreen(vm: QuizViewModel = viewModel()) {
             modifier = Modifier
                 .fillMaxSize()
                 .verticalScroll(scroll)
-                .padding(horizontal = 16.dp, vertical = 10.dp),
+                .padding(horizontal = 20.dp, vertical = 12.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {
             Header(q.topic, vm.right, vm.asked, vm.accuracy)
-            Spacer(Modifier.height(6.dp))
+            Spacer(Modifier.height(8.dp))
             Text(
                 text = q.prompt,
                 color = Color(0xFFF2F2F4),
-                fontSize = 12.5.sp,
-                lineHeight = 15.5.sp,
+                fontSize = 14.5.sp,
+                lineHeight = 18.sp,
                 fontWeight = FontWeight.Medium,
                 textAlign = TextAlign.Center,
             )
-            Spacer(Modifier.height(7.dp))
+            Spacer(Modifier.height(9.dp))
 
             val top = if (vm.correctOnTop) q.correct else q.wrong
             val bottom = if (vm.correctOnTop) q.wrong else q.correct
             Option(top, vm.correctOnTop, vm.verdict) { vm.answer(vm.correctOnTop) }
-            Spacer(Modifier.height(5.dp))
+            Spacer(Modifier.height(6.dp))
             Option(bottom, !vm.correctOnTop, vm.verdict) { vm.answer(!vm.correctOnTop) }
 
             if (vm.verdict == Verdict.WRONG) {
@@ -110,15 +110,15 @@ fun QuizScreen(vm: QuizViewModel = viewModel()) {
                 Text(
                     text = q.why,
                     color = Color(0xFFB9B9C4),
-                    fontSize = 11.sp,
-                    lineHeight = 14.sp,
+                    fontSize = 12.5.sp,
+                    lineHeight = 16.sp,
                     textAlign = TextAlign.Center,
                 )
                 Spacer(Modifier.height(7.dp))
                 Text(
                     text = "TAP TO CONTINUE",
                     color = Muted,
-                    fontSize = 9.sp,
+                    fontSize = 10.sp,
                     fontWeight = FontWeight.Bold,
                 )
             }
@@ -132,13 +132,13 @@ private fun Header(topic: Topic, right: Int, asked: Int, accuracy: Int) {
         Text(
             text = topic.label,
             color = topic.color,
-            fontSize = 10.sp,
+            fontSize = 11.sp,
             fontWeight = FontWeight.Bold,
         )
         Text(
             text = "  $right/$asked  $accuracy%",
             color = Faded,
-            fontSize = 10.sp,
+            fontSize = 11.sp,
             fontWeight = FontWeight.Bold,
         )
     }
@@ -164,17 +164,17 @@ private fun Option(text: String, isCorrect: Boolean, verdict: Verdict, onClick: 
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(15.dp))
+            .clip(RoundedCornerShape(17.dp))
             .background(bg)
             .clickable(enabled = !revealed, onClick = onClick)
-            .padding(horizontal = 10.dp, vertical = 7.dp),
+            .padding(horizontal = 12.dp, vertical = 9.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
             text = text,
             color = fg,
-            fontSize = 11.5.sp,
-            lineHeight = 14.sp,
+            fontSize = 13.sp,
+            lineHeight = 16.sp,
             fontWeight = FontWeight.SemiBold,
             textAlign = TextAlign.Center,
         )
