@@ -48,8 +48,6 @@ Québec French, not Paris French. Every entry is a **chunk** — `il faut que je
 
 ## Build
 
-Push to `main` and grab `drill-debug-apk` from the Actions run, or locally:
-
 ```
 export JAVA_HOME=/opt/homebrew/opt/openjdk@17
 export ANDROID_HOME=/opt/homebrew/share/android-commandlinetools
