@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
@@ -19,6 +20,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -29,7 +31,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -47,6 +54,7 @@ private const val SAFE_FRACTION = 0.70f
 // a 233dp round watch. Snippets are authored to 24 columns, which lands on the 8sp floor.
 private const val CODE_WIDTH_DP = 145f
 private const val OPTION_WIDTH_DP = 143f
+private val LISTEN_ROOM = 26.dp
 private const val CHAR_PER_SP = 0.75f
 
 private val Ink = Color(0xFF000000)
@@ -99,6 +107,8 @@ fun QuizScreen(vm: QuizViewModel = viewModel()) {
             modifier = Modifier
                 .fillMaxWidth(SAFE_FRACTION)
                 .fillMaxHeight(SAFE_FRACTION)
+                // Keeps scrolling content from sliding under the pinned speaker.
+                .padding(top = if (vm.canSpeak) LISTEN_ROOM else 0.dp)
                 .verticalScroll(scroll),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
@@ -126,11 +136,6 @@ fun QuizScreen(vm: QuizViewModel = viewModel()) {
             Spacer(Modifier.height(5.dp))
             Option(bottom, mono, !vm.correctOnTop, vm.verdict, { vm.answer(!vm.correctOnTop) }, vm::advance)
 
-            if (vm.canSpeak) {
-                Spacer(Modifier.height(6.dp))
-                Listen(vm.speakUnlocked, vm::say)
-            }
-
             if (vm.verdict == Verdict.WRONG) {
                 Spacer(Modifier.height(8.dp))
                 Text(
@@ -148,6 +153,14 @@ fun QuizScreen(vm: QuizViewModel = viewModel()) {
                     fontWeight = FontWeight.Bold,
                 )
             }
+        }
+
+        if (vm.canSpeak) {
+            Listen(
+                vm.speakUnlocked,
+                vm::say,
+                Modifier.align(Alignment.TopCenter).padding(top = 20.dp),
+            )
         }
     }
 }
@@ -171,22 +184,36 @@ private fun Header(topic: Topic, right: Int, asked: Int, accuracy: Int) {
 }
 
 @Composable
-private fun Listen(unlocked: Boolean, onSpeak: () -> Unit) {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth(0.62f)
-            .clip(RoundedCornerShape(14.dp))
-            .background(if (unlocked) Card else Color(0xFF101014))
-            .clickable(enabled = unlocked, onClick = onSpeak)
-            .padding(vertical = 6.dp),
-        contentAlignment = Alignment.Center,
+private fun Listen(unlocked: Boolean, onSpeak: () -> Unit, modifier: Modifier = Modifier) {
+    val tint = if (unlocked) Color(0xFF9FE8C0) else Faded
+    Canvas(
+        modifier = modifier
+            .size(34.dp)
+            .clickable(enabled = unlocked, onClick = onSpeak),
     ) {
-        Text(
-            text = "🔊 ÉCOUTER",
-            color = if (unlocked) Color(0xFF9FE8C0) else Faded,
-            fontSize = 10.sp,
-            fontWeight = FontWeight.Bold,
-        )
+        val w = size.width
+        val h = size.height
+        val cone = Path().apply {
+            moveTo(w * 0.30f, h * 0.36f)
+            lineTo(w * 0.52f, h * 0.14f)
+            lineTo(w * 0.52f, h * 0.86f)
+            lineTo(w * 0.30f, h * 0.64f)
+            close()
+        }
+        drawRect(tint, Offset(w * 0.10f, h * 0.36f), Size(w * 0.21f, h * 0.28f))
+        drawPath(cone, tint)
+        val stroke = Stroke(width = w * 0.07f, cap = StrokeCap.Round)
+        listOf(0.24f, 0.40f).forEach { r ->
+            drawArc(
+                color = tint,
+                startAngle = -50f,
+                sweepAngle = 100f,
+                useCenter = false,
+                topLeft = Offset(w * 0.52f - w * r, h * 0.5f - w * r),
+                size = Size(w * r * 2f, w * r * 2f),
+                style = stroke,
+            )
+        }
     }
 }
 
