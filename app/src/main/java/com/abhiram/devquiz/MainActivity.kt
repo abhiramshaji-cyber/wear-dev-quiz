@@ -126,6 +126,11 @@ fun QuizScreen(vm: QuizViewModel = viewModel()) {
             Spacer(Modifier.height(5.dp))
             Option(bottom, mono, !vm.correctOnTop, vm.verdict, { vm.answer(!vm.correctOnTop) }, vm::advance)
 
+            if (vm.canSpeak) {
+                Spacer(Modifier.height(6.dp))
+                Listen(vm.speakUnlocked, vm::say)
+            }
+
             if (vm.verdict == Verdict.WRONG) {
                 Spacer(Modifier.height(8.dp))
                 Text(
@@ -160,6 +165,26 @@ private fun Header(topic: Topic, right: Int, asked: Int, accuracy: Int) {
             text = "  $right/$asked  $accuracy%",
             color = Faded,
             fontSize = 11.sp,
+            fontWeight = FontWeight.Bold,
+        )
+    }
+}
+
+@Composable
+private fun Listen(unlocked: Boolean, onSpeak: () -> Unit) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth(0.62f)
+            .clip(RoundedCornerShape(14.dp))
+            .background(if (unlocked) Card else Color(0xFF101014))
+            .clickable(enabled = unlocked, onClick = onSpeak)
+            .padding(vertical = 6.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            text = "🔊 ÉCOUTER",
+            color = if (unlocked) Color(0xFF9FE8C0) else Faded,
+            fontSize = 10.sp,
             fontWeight = FontWeight.Bold,
         )
     }

@@ -31,8 +31,12 @@ class Question(
     val correct: String,
     val wrong: String,
     val why: String,
+    val speak: String? = null,
 ) {
     val lane: Lane get() = topic.lane
+
+    // Speaking it early would give the answer away when the French is the answer, not the prompt.
+    val speakableUnanswered: Boolean get() = speak != null && speak == prompt
     val id: Int = (code.orEmpty() + prompt + correct).hashCode()
 }
 

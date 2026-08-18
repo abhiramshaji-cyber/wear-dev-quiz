@@ -2,175 +2,175 @@ package com.abhiram.devquiz
 
 internal val frTime: List<Question> = listOf(
 
-    f(
+    fr(
         Topic.TIME,
         "présentement",
         "right now",
         "presently, soon",
         "Québec says présentement where France says en ce moment.",
     ),
-    f(
+    en(
         Topic.TIME,
         "the day before yesterday",
         "avant-hier",
         "hier avant",
         "And après-demain is the day after tomorrow.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "la semaine passée",
         "last week",
         "the week ahead",
         "Québec prefers passée where France says dernière.",
     ),
-    f(
+    en(
         Topic.TIME,
         "next week",
         "la semaine prochaine",
         "la semaine suivante",
         "Prochaine from now. Suivante is the next one in a past story.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "il y a deux jours",
         "two days ago",
         "in two days",
         "il y a is ago. Dans deux jours is in two days.",
     ),
-    f(
+    en(
         Topic.TIME,
         "in an hour",
         "dans une heure",
         "en une heure",
         "dans is when it starts. En une heure is how long it takes.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "depuis trois ans",
         "for three years, still going",
         "three years ago",
         "depuis + present tense covers a stretch that has not ended.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "pendant deux heures",
         "for two hours",
         "during the second hour",
         "pendant is a completed stretch. Depuis is still running.",
     ),
-    f(
+    en(
         Topic.TIME,
         "every other day",
         "aux deux jours",
         "chaque deux jours",
         "Québec says aux deux jours. Chaque deux is not French.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "de temps en temps",
         "from time to time",
         "on time",
         "On time is à l'heure.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "tout le temps",
         "all the time",
         "the whole weather",
         "Also à chaque fois, every single time.",
     ),
-    f(
+    en(
         Topic.TIME,
         "right away, immediately",
         "tout de suite",
         "toute une suite",
         "Also là là in Québec speech, meaning right this second.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "à l'heure",
         "on time",
         "hourly",
         "Payé à l'heure is the hourly one, context decides.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "d'ici vendredi",
         "by Friday",
         "from Friday on",
         "d'ici + time is the deadline chunk.",
     ),
-    f(
+    en(
         Topic.TIME,
         "since this morning",
         "depuis à matin",
         "depuis ce matin-ci",
         "À matin and à soir are the everyday Québec forms.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "à soir",
         "tonight (Québec)",
         "at evening time",
         "Standard French is ce soir. Both are understood everywhere.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "la fin de semaine",
         "the weekend",
         "the end of the workweek",
         "Québec avoids week-end. La fin de semaine is the norm.",
     ),
-    f(
+    en(
         Topic.TIME,
         "in the meantime",
         "entre-temps",
         "dans le temps",
         "Dans le temps means back in the day.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "ça fait longtemps",
         "it's been a long time",
         "it takes a long time",
         "Ça prend du temps is the one that means it takes long.",
     ),
-    f(
+    en(
         Topic.TIME,
         "it takes about ten minutes",
         "ça prend une dizaine de minutes",
         "ça prend dix minutes environ de temps",
         "Une dizaine is the neat way to say about ten.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "tantôt",
         "earlier or in a bit",
         "always",
         "In Québec tantôt swings both ways. Context tells you which.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "à la dernière minute",
         "at the last minute",
         "in the final minute of the game",
         "Same image as English, same use.",
     ),
-    f(
+    en(
         Topic.TIME,
         "early in the morning",
         "de bonne heure",
         "en bonne heure",
         "de bonne heure is the fixed chunk for early.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "ça achève",
         "it's almost done",
         "it's just starting",
         "Very Québec. Achever is to finish off.",
     ),
-    f(
+    fr(
         Topic.TIME,
         "on est rendu à quelle heure?",
         "what time are we at?",
@@ -181,175 +181,175 @@ internal val frTime: List<Question> = listOf(
 
 internal val frSocial: List<Question> = listOf(
 
-    f(
+    fr(
         Topic.SOCIAL,
-        "bienvenue (after merci)",
+        "bienvenue",
         "you're welcome",
         "welcome in",
         "Québec answers merci with bienvenue. France says de rien.",
     ),
-    f(
+    en(
         Topic.SOCIAL,
         "how's it going?",
         "comment ça va?",
         "comment est-ce que ça marche?",
         "Casual Québec also has ça va-tu bien? and comment ça file?",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "ça va bien, pis toi?",
         "good, and you?",
         "it goes well, but you?",
         "Pis is the spoken form of puis, meaning and.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "allô",
         "hi (in person or on the phone)",
         "phone only",
         "In Québec allô works face to face too, unlike in France.",
     ),
-    f(
+    en(
         Topic.SOCIAL,
         "see you later",
         "à tantôt",
         "à plus loin",
         "À tantôt, à plus tard, or just bye, which Quebecers use freely.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "mon chum",
         "my boyfriend",
         "my roommate",
         "Chum is a boyfriend, blonde is a girlfriend. Un ami is a friend.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "ma blonde",
         "my girlfriend",
         "my blonde friend",
         "Purely a relationship word, hair colour aside.",
     ),
-    f(
+    en(
         Topic.SOCIAL,
         "my buddies",
         "mes chums de gars",
         "mes amies gars",
         "Chum shifts meaning with the phrase around it.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "on se voit demain",
         "see you tomorrow",
         "we saw each other yesterday",
         "On se voit is the everyday plan chunk.",
     ),
-    f(
+    en(
         Topic.SOCIAL,
         "want to grab a coffee?",
         "ça te tente d'aller prendre un café?",
         "veux-tu un café aller?",
         "ça te tente de + verb is the natural invitation.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "on prend une bière?",
         "shall we grab a beer?",
         "did we take a beer?",
         "Present tense with a question mark is a plain invitation.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "excuse-moi de te déranger",
         "sorry to bother you",
         "excuse me, you're bothering",
         "The polite opener before asking for something.",
     ),
-    f(
+    en(
         Topic.SOCIAL,
         "no worries",
         "pas de trouble",
         "sans souci de rien",
         "Pas de trouble is heard everywhere in Québec.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "c'est correct",
         "it's fine, no problem",
         "it's the right answer",
         "The Québec workhorse for it's fine. Pronounced c'est correc'.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "ça me fait plaisir",
         "my pleasure",
         "it pleases me a lot",
         "A warmer answer to merci than bienvenue.",
     ),
-    f(
+    en(
         Topic.SOCIAL,
         "congratulations",
         "félicitations",
         "bonne félicitation",
         "Always plural in French. The singular is never used alone.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "bonne chance",
         "good luck",
         "good chance",
         "For an exam or an interview. Bon courage is for a slog.",
     ),
-    f(
+    en(
         Topic.SOCIAL,
         "take care",
         "prends soin de toi",
         "prends attention de toi",
         "prendre soin de is the fixed chunk for taking care.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "je te présente Marc",
         "this is Marc",
         "Marc will present",
         "The standard introduction line.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "enchanté",
         "nice to meet you",
         "delighted with it",
         "Said once, at the introduction.",
     ),
-    f(
+    en(
         Topic.SOCIAL,
         "can you repeat, please?",
         "peux-tu répéter, s'il te plaît?",
         "peux-tu redire, s'il vous plaît?",
         "With tu, keep s'il te plaît. Mixing tu and vous sounds off.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "je comprends pas",
         "I don't understand",
         "I don't hear",
         "In speech the ne disappears. Everyone drops it.",
     ),
-    f(
+    en(
         Topic.SOCIAL,
         "how do you say that in French?",
         "comment on dit ça en français?",
         "comment tu parles ça en français?",
         "Comment on dit is the phrase to memorise first.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "parle plus lentement, s'il te plaît",
         "speak more slowly, please",
         "speak louder, please",
         "Louder would be plus fort.",
     ),
-    f(
+    fr(
         Topic.SOCIAL,
         "on se tiraille",
         "we're teasing each other",
