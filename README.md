@@ -1,33 +1,49 @@
 # Drill
 
-Two choice senior frontend interview drill for Wear OS. Built for a OnePlus Watch 2R, works on any round Wear OS 4 watch.
+Two choice drill for Wear OS. Built for a OnePlus Watch 2R, works on any round Wear OS 4 watch.
 
-176 questions on the things interviewers actually probe at mid and senior level: React internals, caching and state architecture, performance diagnosis, the TypeScript type system, the JS runtime, frontend architecture, debugging process, and the live coding tasks that replace trivia. No syntax recall, no "what does HTML stand for".
+433 questions in two alternating lanes: **read the code, pick what it does** in TypeScript and JavaScript, then **Québec French vocabulary** as connected chunks you can actually build a sentence from.
 
 ## How it works
 
 - One question, two answers. Tap one.
+- The lanes alternate: TypeScript, French, TypeScript, French. Order inside each lane is random every round.
 - Right: brief green confirm, short buzz, auto advance.
-- Wrong: the correct answer turns green, yours turns red, and a one line reason explains the mechanism. Double buzz. Tap anywhere to continue.
-- **A question you miss comes back within the next 5 turns, and keeps coming back until you get it right.**
-- Which side the correct answer sits on is randomized every time, so you cannot memorize positions.
-- Question order is randomized per round. Questions you have ever missed are seeded early in the next round and stay flagged across launches.
+- Wrong: the correct answer turns green, yours turns red, and a one line reason explains it. Double buzz. Tap anywhere to continue.
+- **A question you miss comes back within the next few turns of its lane, and keeps coming back until you get it right.**
+- Which side the correct answer sits on is randomized every time.
+- Questions you have ever missed are seeded early in the next round and stay flagged across launches.
 - Long press anywhere resets the session score.
 
-Header shows the topic, this session's right over asked, and accuracy.
+## TypeScript, 198 questions
 
-## Topics
+A snippet on screen, two possible results. Language behaviour, not trivia: the things you use daily and still cannot answer cold.
 
 | Topic | Questions |
 | --- | --- |
-| RENDER | 28 |
-| TYPES | 28 |
-| RUNTIME | 28 |
-| STATE | 22 |
-| DESIGN | 22 |
-| PERF | 20 |
-| CODE | 16 |
-| DEBUG | 12 |
+| TYPES | 46 |
+| BASICS | 28 |
+| ASYNC | 22 |
+| GOTCHA | 22 |
+| ARRAY | 25 |
+| OBJECT | 20 |
+| NARROW | 20 |
+| GENERIC | 15 |
+
+## French, 235 questions
+
+Québec French, not Paris French. Every entry is a **chunk** — `il faut que je`, `j'ai de la misère à`, `ça me tente pas` — because single words do not help you build a sentence. Prompts run both ways: French to English and English to French, so you drill recognition and production.
+
+| Topic | Questions |
+| --- | --- |
+| PHRASES | 40 |
+| VERBES | 30 |
+| TRAVAIL | 30 |
+| QUOTIDIEN | 30 |
+| QUEBEC | 30 |
+| ENDROITS | 25 |
+| TEMPS | 25 |
+| SOCIAL | 25 |
 
 ## Build
 
@@ -39,19 +55,3 @@ export ANDROID_HOME=/opt/homebrew/share/android-commandlinetools
 ./gradlew assembleDebug
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
-
-## Adding questions
-
-Everything lives in `app/src/main/java/com/abhiram/devquiz/Questions.kt`. One entry per question:
-
-```kotlin
-q(
-    Topic.RENDER,
-    "prompt, keep it under 60 characters",
-    "the correct answer",
-    "the plausible wrong answer",
-    "one line on why, shown only when you miss it",
-)
-```
-
-Prompts read fine up to about 78 characters and options up to about 70 on a 192dp screen, which is the tightest round Wear display. Longer than that and the screen scrolls instead of fitting.
