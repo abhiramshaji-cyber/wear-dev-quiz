@@ -2,210 +2,210 @@ package com.abhiram.devquiz
 
 internal val frWork: List<Question> = listOf(
 
-    f(
+    fr(
         Topic.WORK,
         "une réunion d'équipe",
         "a team meeting",
         "a team goal",
         "Réunion is the meeting. A goal is un objectif.",
     ),
-    f(
+    en(
         Topic.WORK,
         "I have a meeting at 2",
         "j'ai une réunion à deux heures",
         "j'ai un meeting à deux heures",
         "Réunion is the Québec word. Meeting is heard but frowned on.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "faire un suivi",
         "to follow up",
         "to keep going",
         "Je te fais un suivi demain is the standard work email line.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "je te reviens là-dessus",
         "I'll get back to you on that",
         "I'll come back there",
         "The exact chunk for I'll get back to you.",
     ),
-    f(
+    en(
         Topic.WORK,
         "as soon as possible (work email)",
         "dès que possible",
         "aussi vite que je peux",
         "dès que possible is the neutral written form.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "une échéance",
         "a deadline",
         "an exchange",
         "Also un délai. Deadline is understood but échéance is cleaner.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "je suis débordé",
         "I'm swamped",
         "I'm confused",
         "Débordé is overflowing with work. Confused is mêlé in Québec.",
     ),
-    f(
+    en(
         Topic.WORK,
         "I'm working on it",
         "je travaille dessus",
         "je travaille sur ça",
         "travailler dessus is what people actually say.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "un courriel",
         "an email",
         "a courier",
         "Québec says courriel where France often says mail.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "envoyer un courriel",
         "to send an email",
         "to open an email",
         "Envoyer to send, recevoir to receive.",
     ),
-    f(
+    en(
         Topic.WORK,
         "to book a meeting",
         "céduler une rencontre",
         "réserver une réunion",
         "Céduler is the Québec verb from schedule. Fixer is also fine.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "on se rencontre demain",
         "we're meeting tomorrow",
         "we found each other yesterday",
         "se rencontrer for a scheduled meet, se voir for casual.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "mettre à jour",
         "to update",
         "to set aside",
         "Mets-le à jour. The noun is une mise à jour.",
     ),
-    f(
+    en(
         Topic.WORK,
         "I need your approval",
         "j'ai besoin de ton approbation",
         "j'ai besoin de ton approuvement",
         "Approbation is the noun. Approuvement does not exist.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "d'accord, ça me convient",
         "fine, that works for me",
         "I agree, I'm coming",
         "convenir à is to suit someone.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "je vais m'en occuper",
         "I'll handle it",
         "I'll be busy with it",
         "The standard reply when you take a task.",
     ),
-    f(
+    en(
         Topic.WORK,
         "a heads up",
         "un avertissement",
         "une tête haute",
         "Or simply je te préviens, I'm letting you know.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "je te tiens au courant",
         "I'll keep you posted",
         "I'll hold you back",
         "être au courant is to be in the loop.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "es-tu au courant?",
         "do you know about it?",
         "are you running?",
         "Au courant is the fixed chunk for being informed.",
     ),
-    f(
+    en(
         Topic.WORK,
         "a raise",
         "une augmentation",
         "une élévation",
         "Demander une augmentation is to ask for a raise.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "une entrevue d'embauche",
         "a job interview",
         "a hiring notice",
         "Québec says entrevue where France says entretien.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "un poste à temps plein",
         "a full time position",
         "a full price post",
         "The opposite is à temps partiel.",
     ),
-    f(
+    en(
         Topic.WORK,
         "to hire someone",
         "embaucher quelqu'un",
         "engager un travail",
         "Embaucher, or the Québec verb engager for a person.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "un chiffre d'affaires",
         "revenue",
         "a business number",
         "The fixed accounting term for turnover.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "ça presse",
         "it's urgent",
         "it's pressed",
         "Very Québec. C'est urgent works too but ça presse is spoken.",
     ),
-    f(
+    en(
         Topic.WORK,
         "no rush",
         "ça presse pas",
         "pas de course",
         "The plain negative of ça presse.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "on va se parler plus tard",
         "we'll talk later",
         "we're going to speak loudly",
         "se parler is to talk to each other.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "je m'excuse du retard",
         "sorry for the delay",
         "I excuse the delay",
         "The standard apology line in a late reply.",
     ),
-    f(
+    en(
         Topic.WORK,
         "can you take a look?",
         "peux-tu jeter un coup d'oeil?",
         "peux-tu voir un oeil?",
         "jeter un coup d'oeil is the fixed phrase for a quick look.",
     ),
-    f(
+    fr(
         Topic.WORK,
         "en télétravail",
         "working from home",
@@ -216,210 +216,210 @@ internal val frWork: List<Question> = listOf(
 
 internal val frDaily: List<Question> = listOf(
 
-    f(
+    fr(
         Topic.DAILY,
         "je me lève à sept heures",
         "I get up at seven",
         "I lift it at seven",
         "se lever is reflexive. Lever alone is lifting something.",
     ),
-    f(
+    en(
         Topic.DAILY,
         "I'm going to bed",
         "je m'en vais me coucher",
         "je vais au lit",
         "se coucher is the verb. Aller au lit sounds translated.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "faire l'épicerie",
         "to do the grocery shopping",
         "to run a grocery store",
         "Very Québec. France says faire les courses.",
     ),
-    f(
+    en(
         Topic.DAILY,
         "to go shopping (clothes)",
         "aller magasiner",
         "aller au shopping",
         "Magasiner is the Québec verb, from magasin.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "j'ai faim",
         "I'm hungry",
         "I'm doing well",
         "Hunger and thirst use avoir: avoir faim, avoir soif.",
     ),
-    f(
+    en(
         Topic.DAILY,
         "I'm cold",
         "j'ai froid",
         "je suis froid",
         "Je suis froid describes your personality, not your temperature.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "il fait froid dehors",
         "it's cold outside",
         "he's making the cold outside",
         "Weather uses il fait: il fait beau, il fait chaud.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "il mouille",
         "it's raining",
         "it's damp inside",
         "The Québec everyday form. Il pleut is the standard one.",
     ),
-    f(
+    en(
         Topic.DAILY,
         "to put on a coat",
         "mettre un manteau",
         "porter un manteau dessus",
         "mettre is the act of putting on, porter is wearing it already.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "je m'habille",
         "I'm getting dressed",
         "I'm buying clothes",
         "s'habiller reflexive. Buying is acheter du linge in Québec.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "faire le ménage",
         "to clean the house",
         "to manage the home",
         "Also passer l'aspirateur, to vacuum.",
     ),
-    f(
+    en(
         Topic.DAILY,
         "to do laundry",
         "faire le lavage",
         "faire la lessive du linge",
         "Québec says faire le lavage. Linge is clothes generally.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "j'ai pas le temps",
         "I don't have time",
         "I don't like the weather",
         "temps is both time and weather. Context decides.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "je suis fatigué",
         "I'm tired",
         "I'm bored",
         "Bored is je m'ennuie, which also means I miss someone.",
     ),
-    f(
+    en(
         Topic.DAILY,
         "I miss you",
         "tu me manques",
         "je te manque",
         "It flips. Je te manque means you miss me.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "prendre une marche",
         "to go for a walk",
         "to take a step",
         "A Québec calque of take a walk. France says faire une promenade.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "je m'en vais",
         "I'm heading out",
         "I'm coming back",
         "s'en aller is to leave. Revenir is to come back.",
     ),
-    f(
+    en(
         Topic.DAILY,
         "I'll be right back",
         "je reviens tout de suite",
         "je retourne maintenant",
         "revenir is coming back here. Retourner is going back there.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "j'ai oublié mes clés",
         "I forgot my keys",
         "I lost my keys",
         "Lost is perdu. Forgotten is oublié.",
     ),
-    f(
+    en(
         Topic.DAILY,
         "to be hungry for supper",
         "avoir faim pour le souper",
         "être faim pour le dîner",
         "In Québec dîner is lunch and souper is the evening meal.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "le déjeuner",
         "breakfast (in Québec)",
         "lunch",
         "Québec keeps the old triple: déjeuner, dîner, souper.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "je vais prendre une douche",
         "I'm going to take a shower",
         "I'm going to take a bath",
         "Bath is un bain. Both use prendre.",
     ),
-    f(
+    en(
         Topic.DAILY,
         "to fall asleep",
         "s'endormir",
         "dormir en bas",
         "s'endormir is dropping off, dormir is being asleep.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "ça me réveille",
         "it wakes me up",
         "it makes me dream",
         "se réveiller to wake up, réveiller quelqu'un to wake someone.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "j'ai mal à la tête",
         "I have a headache",
         "I hurt my head",
         "avoir mal à + body part is the fixed pattern for pain.",
     ),
-    f(
+    en(
         Topic.DAILY,
         "I'm hurt / injured",
         "je me suis fait mal",
         "je suis mal",
         "se faire mal is to hurt yourself. Je suis mal means I'm uncomfortable.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "prendre rendez-vous",
         "to make an appointment",
         "to show up on time",
         "J'ai un rendez-vous chez le médecin.",
     ),
-    f(
+    en(
         Topic.DAILY,
         "to run errands",
         "faire des commissions",
         "faire des erreurs",
         "Commissions in Québec are errands. Erreurs are mistakes.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "ça coûte cher",
         "it's expensive",
         "it costs a lot of care",
         "Cheap is pas cher. Cher never takes an s here.",
     ),
-    f(
+    fr(
         Topic.DAILY,
         "je vais payer avec ma carte",
         "I'll pay by card",

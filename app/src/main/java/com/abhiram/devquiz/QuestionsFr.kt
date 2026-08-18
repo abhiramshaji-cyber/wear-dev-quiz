@@ -1,7 +1,10 @@
 package com.abhiram.devquiz
 
-internal fun f(topic: Topic, prompt: String, correct: String, wrong: String, why: String) =
-    Question(topic, null, prompt, correct, wrong, why)
+internal fun fr(topic: Topic, french: String, english: String, wrong: String, why: String) =
+    Question(topic, null, french, english, wrong, why, speak = french)
+
+internal fun en(topic: Topic, english: String, french: String, wrong: String, why: String) =
+    Question(topic, null, english, french, wrong, why, speak = french)
 
 object FrQuestions {
 
@@ -10,210 +13,210 @@ object FrQuestions {
 
 internal val frVerbs: List<Question> = listOf(
 
-    f(
+    fr(
         Topic.VERBS,
         "je suis en train de finir",
         "I'm in the middle of finishing",
         "I'm about to finish",
         "en train de + verb is the ongoing right now. Sur le point de is about to.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "je viens de finir",
         "I just finished",
         "I'm coming to finish",
         "venir de + verb is the recent past. It never means to come.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "je vais le faire",
         "I'm going to do it",
         "I did it",
         "aller + verb is the everyday future. Quebecers use it far more than the real futur.",
     ),
-    f(
+    en(
         Topic.VERBS,
         "I have to leave",
         "il faut que je parte",
         "il faut que je pars",
         "il faut que takes the subjunctive. Or dodge it: je dois partir.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "j'ai besoin de",
         "I need",
         "I want",
         "avoir besoin de + noun or verb. Wanting is avoir envie de.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "j'ai envie de sortir",
         "I feel like going out",
         "I have to go out",
         "avoir envie de is the desire. Avoir besoin de is the need.",
     ),
-    f(
+    en(
         Topic.VERBS,
         "I'm used to it",
         "je suis habitué à ça",
         "j'ai l'habitude à ça",
         "être habitué à for the state, avoir l'habitude de for the routine.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "j'essaie de comprendre",
         "I'm trying to understand",
         "I manage to understand",
         "essayer de is the attempt. Réussir à is pulling it off.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "j'ai réussi à le faire",
         "I managed to do it",
         "I tried to do it",
         "réussir à + verb. It carries the success, not just the effort.",
     ),
-    f(
+    en(
         Topic.VERBS,
         "I forgot to call him",
         "j'ai oublié de l'appeler",
         "j'ai oublié l'appeler",
         "oublier de + infinitive. The de is not optional.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "je commence à comprendre",
         "I'm starting to understand",
         "I stopped understanding",
         "commencer à + verb, but arrêter de + verb. The preposition flips.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "arrête de parler",
         "stop talking",
         "start talking",
         "arrêter de + infinitive. Arrête! alone is just stop it.",
     ),
-    f(
+    en(
         Topic.VERBS,
         "I decided to stay",
         "j'ai décidé de rester",
         "j'ai décidé à rester",
         "décider de + verb. À shows up with commencer, apprendre, réussir.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "j'apprends à conduire",
         "I'm learning to drive",
         "I'm teaching driving",
         "apprendre à + verb. Teaching someone is apprendre quelque chose à quelqu'un.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "je pense que oui",
         "I think so",
         "I think not",
         "Je pense que non is the other half of the pair.",
     ),
-    f(
+    en(
         Topic.VERBS,
         "I'd like to ask you something",
         "j'aimerais te demander quelque chose",
         "j'aime te demander quelque chose",
         "j'aimerais is the polite conditional. J'aime is a plain statement of liking.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "je voudrais savoir",
         "I would like to know",
         "I wanted to know",
         "voudrais softens a request. Je veux savoir lands as blunt.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "il faut que j'y aille",
         "I've got to get going",
         "I have to go there once",
         "The standard way to excuse yourself. The y is part of the fixed phrase.",
     ),
-    f(
+    en(
         Topic.VERBS,
         "I'm getting ready to go",
         "je me prépare à partir",
         "je prépare à partir",
         "se préparer is reflexive. Préparer alone means preparing a thing.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "je me demande si",
         "I wonder if",
         "I'm asking myself for",
         "se demander si is the fixed chunk for wondering.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "je m'en occupe",
         "I'll take care of it",
         "I'm busy",
         "s'occuper de something, and en replaces the thing. Very common at work.",
     ),
-    f(
+    en(
         Topic.VERBS,
         "I'm sorry, I'm late",
         "je m'excuse, je suis en retard",
         "je m'excuse, je suis tard",
         "en retard for a late person. Tard alone is just the hour being late.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "j'ai hâte de te voir",
         "I can't wait to see you",
         "I'm in a hurry to see you",
         "avoir hâte de is looking forward. Being rushed is être pressé.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "je suis pressé",
         "I'm in a hurry",
         "I'm stressed",
         "Stressed is stressé. Pressé is short on time.",
     ),
-    f(
+    en(
         Topic.VERBS,
         "I ended up staying",
         "j'ai fini par rester",
         "j'ai fini de rester",
         "finir par + verb means it turned out that way in the end.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "je suis en train de le faire",
         "I'm doing it right now",
         "I'm going to do it",
         "The le sits before the infinitive, not after.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "il vaut mieux attendre",
         "it's better to wait",
         "it's worth waiting for",
         "il vaut mieux + verb is the everyday way to give advice.",
     ),
-    f(
+    en(
         Topic.VERBS,
         "I have trouble understanding",
         "j'ai de la misère à comprendre",
         "j'ai du trouble comprendre",
         "avoir de la misère à is the Québec version of avoir du mal à.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "ça me tente pas",
         "I don't feel like it",
         "I don't understand it",
         "Very Québec. Ça me tente is the positive, tenter is to appeal.",
     ),
-    f(
+    fr(
         Topic.VERBS,
         "je suis tanné de ça",
         "I'm fed up with it",
@@ -224,280 +227,280 @@ internal val frVerbs: List<Question> = listOf(
 
 internal val frPhrase: List<Question> = listOf(
 
-    f(
+    fr(
         Topic.PHRASE,
         "en fait",
         "actually",
         "in the end",
         "en fait corrects or clarifies. Finalement is the in the end one.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "quand même",
         "still, anyway",
         "at the same time",
         "The most used filler in the language, roughly all the same.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "par contre",
         "on the other hand",
         "because of that",
         "It flags a contrast, and Quebecers open sentences with it constantly.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "de toute façon",
         "anyway",
         "in every way",
         "It closes a topic. Quand même is more of a concession.",
     ),
-    f(
+    en(
         Topic.PHRASE,
         "however / that said",
         "cela dit",
         "ça dit",
         "cela dit opens a concession. Ça dit is not a phrase at all.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "c'est-à-dire",
         "that is to say",
         "it is said that",
         "Use it to restate. Autrement dit is the other way of putting it.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "autrement dit",
         "in other words",
         "otherwise said no",
         "The natural bridge when you rephrase something.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "d'ailleurs",
         "besides, by the way",
         "elsewhere",
         "Adding a supporting point. Ailleurs alone is the place word.",
     ),
-    f(
+    en(
         Topic.PHRASE,
         "in the meantime",
         "en attendant",
         "en attente",
         "en attendant is while we wait. En attente is a status, like on hold.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "au cas où",
         "just in case",
         "in which case",
         "Followed by the conditional: au cas où il arriverait.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "à moins que",
         "unless",
         "at least",
         "Au moins is at least. À moins que takes the subjunctive.",
     ),
-    f(
+    en(
         Topic.PHRASE,
         "as long as",
         "tant que",
         "autant que",
         "tant que is about duration. Autant que is about quantity.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "dès que possible",
         "as soon as possible",
         "since it's possible",
         "dès que means the moment that. Depuis que is since, in the past.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "peu importe",
         "no matter, whatever",
         "a little important",
         "peu importe le prix, peu importe quand. Very handy.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "n'importe quoi",
         "anything, nonsense",
         "not important",
         "Also thrown at a bad idea: c'est n'importe quoi.",
     ),
-    f(
+    en(
         Topic.PHRASE,
         "whenever you want",
         "quand tu veux",
         "quand tu voudrais",
         "quand tu veux is the standard casual offer.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "ça dépend de",
         "it depends on",
         "it depends for",
         "Always de. Ça dépend de toi means it's up to you.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "il s'agit de",
         "it's about",
         "he acts as",
         "Impersonal only, so it never takes a real subject.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "je m'en fous",
         "I don't care",
         "I'm crazy about it",
         "Casual and a bit rude. Ça m'est égal is the polite version.",
     ),
-    f(
+    en(
         Topic.PHRASE,
         "it doesn't matter to me",
         "ça m'est égal",
         "ça m'égale",
         "A safe polite way to say you have no preference.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "à mon avis",
         "in my opinion",
         "at my age",
         "Also selon moi, or the Québec favourite moi je trouve que.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "je trouve que c'est",
         "I find that it's",
         "I found what it is",
         "trouver que is the most natural way to give an opinion.",
     ),
-    f(
+    en(
         Topic.PHRASE,
         "in the end / finally",
         "finalement",
         "à la fin",
         "finalement is the discourse marker. À la fin is a literal ending.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "tout à coup",
         "all of a sudden",
         "all at once",
         "Tout d'un coup is the same idea. Tout de suite is right away.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "tout de suite",
         "right away",
         "one after another",
         "Said fast it sounds like tsuite. Same word.",
     ),
-    f(
+    en(
         Topic.PHRASE,
         "at least",
         "au moins",
         "à moins",
         "au moins deux heures. À moins que is the unless one.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "de plus en plus",
         "more and more",
         "much more",
         "The mirror is de moins en moins, less and less.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "plus ou moins",
         "more or less",
         "no more no less",
         "Also à peu près, roughly, which Quebecers say constantly.",
     ),
-    f(
+    en(
         Topic.PHRASE,
         "roughly, about",
         "à peu près",
         "peu à peu",
         "peu à peu is little by little. Different chunk entirely.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "ça vaut la peine",
         "it's worth it",
         "it hurts",
         "Negative: ça vaut pas la peine, not worth the trouble.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "ça marche pas",
         "it doesn't work",
         "it doesn't walk",
         "For a broken thing. Ça marche alone is also okay, deal.",
     ),
-    f(
+    en(
         Topic.PHRASE,
         "it makes sense",
         "ça a du sens",
         "ça fait sens",
         "ça a du sens is the correct form, though the calque is spreading.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "j'ai l'impression que",
         "I get the feeling that",
         "I'm impressed that",
         "Softens a claim, exactly like the English hedge.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "ça me dérange pas",
         "I don't mind",
         "it doesn't bother to me",
         "déranger is to bother. The polite way to accept anything.",
     ),
-    f(
+    en(
         Topic.PHRASE,
         "as far as I know",
         "à ce que je sache",
         "aussi loin que je sais",
         "The second is a word for word calque that no one says.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "entre autres",
         "among other things",
         "between others",
         "Always plural, and it introduces an example.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "surtout pas",
         "definitely not",
         "above all yes",
         "surtout means especially, so surtout pas is an emphatic no.",
     ),
-    f(
+    en(
         Topic.PHRASE,
         "on the contrary",
         "au contraire",
         "en contraire",
         "au contraire, standing alone, is a full answer.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "ça fait que",
         "so, therefore",
         "it makes what",
         "Québec's everyday so. Shortened in speech to fait que or juste faque.",
     ),
-    f(
+    fr(
         Topic.PHRASE,
         "genre",
         "like, sort of",

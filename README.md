@@ -11,6 +11,7 @@ Two choice drill for Wear OS. Built for a OnePlus Watch 2R, works on any round W
 - Right: brief green confirm, short buzz, auto advance.
 - Wrong: the correct answer turns green, yours turns red, and a one line reason explains it. Double buzz. Tap anywhere to continue.
 - **A question you miss comes back within the next few turns of its lane, and keeps coming back until you get it right.**
+- French questions carry an **ÉCOUTER** button that reads the French out loud in a Québec voice at 0.6 speed, and the French is spoken once on its own the moment an answer is revealed. When the French is the answer rather than the question, the button stays dim until you have answered, so it never gives the answer away.
 - Which side the correct answer sits on is randomized every time.
 - Questions you have ever missed are seeded early in the next round and stay flagged across launches.
 - Long press anywhere resets the session score.

@@ -2,175 +2,175 @@ package com.abhiram.devquiz
 
 internal val frPlace: List<Question> = listOf(
 
-    f(
+    fr(
         Topic.PLACE,
         "au dépanneur",
         "at the corner store",
         "at the repair shop",
         "A Québec institution. Dépanner is to help out in a pinch.",
     ),
-    f(
+    en(
         Topic.PLACE,
         "at the pharmacy",
         "à la pharmacie",
         "au pharmacien",
         "À la for the place, au pharmacien would be the person.",
     ),
-    f(
+    fr(
         Topic.PLACE,
         "je m'en vais chez nous",
         "I'm heading home",
         "I'm going to our friends' place",
         "In Québec chez nous often means my own home, even alone.",
     ),
-    f(
+    en(
         Topic.PLACE,
         "at my place",
         "chez moi",
         "à ma maison",
         "chez + person is the fixed way to say at someone's home.",
     ),
-    f(
+    fr(
         Topic.PLACE,
         "en haut / en bas",
         "upstairs / downstairs",
         "outside / inside",
         "Inside and outside are en dedans and dehors.",
     ),
-    f(
+    en(
         Topic.PLACE,
         "it's right beside",
         "c'est juste à côté",
         "c'est droit au côté",
         "juste à côté is the everyday next door chunk.",
     ),
-    f(
+    fr(
         Topic.PLACE,
         "en face de",
         "across from",
         "in the face of",
         "En face de la banque, across from the bank.",
     ),
-    f(
+    en(
         Topic.PLACE,
         "turn right",
         "tourne à droite",
         "tourne sur la droite",
         "À droite, à gauche, tout droit for straight ahead.",
     ),
-    f(
+    fr(
         Topic.PLACE,
         "tout droit",
         "straight ahead",
         "all rights",
         "Easy to mix with à droite. Tout droit has no à.",
     ),
-    f(
+    fr(
         Topic.PLACE,
         "prendre le métro",
         "to take the subway",
         "to measure with a tape",
         "In Montréal, prendre le métro or prendre l'autobus.",
     ),
-    f(
+    en(
         Topic.PLACE,
         "my car",
         "mon char",
         "mon carrosse",
         "Char is the everyday Québec word for a car. Voiture is fine too.",
     ),
-    f(
+    fr(
         Topic.PLACE,
         "embarquer dans le char",
         "to get in the car",
         "to load the car",
         "Québec uses embarquer and débarquer for getting in and out.",
     ),
-    f(
+    en(
         Topic.PLACE,
         "to park the car",
         "stationner le char",
         "parker la voiture",
         "Stationner is the correct verb. Un stationnement is the lot.",
     ),
-    f(
+    fr(
         Topic.PLACE,
         "c'est loin d'ici?",
         "is it far from here?",
         "is it long from here?",
         "Loin is distance, long is length or duration.",
     ),
-    f(
+    en(
         Topic.PLACE,
         "on the corner of the street",
         "au coin de la rue",
         "sur le coin de rue",
         "au coin de is fixed. It also means very close by.",
     ),
-    f(
+    fr(
         Topic.PLACE,
         "je suis perdu",
         "I'm lost",
         "I lost it",
         "Je l'ai perdu is I lost it. Je suis perdu is about you.",
     ),
-    f(
+    en(
         Topic.PLACE,
         "the counter / the till",
         "la caisse",
         "le comptoir de paie",
         "Passer à la caisse is to go pay.",
     ),
-    f(
+    fr(
         Topic.PLACE,
         "un stationnement",
         "a parking spot or lot",
         "a train station",
         "A station is une gare, and a metro stop is une station.",
     ),
-    f(
+    en(
         Topic.PLACE,
         "a lineup",
         "une file d'attente",
         "une ligne d'attente",
         "In Québec you also hear faire la file or faire la ligne.",
     ),
-    f(
+    fr(
         Topic.PLACE,
         "à l'extérieur de la ville",
         "outside the city",
         "at the outer city hall",
         "En ville means downtown or in town in Québec.",
     ),
-    f(
+    en(
         Topic.PLACE,
         "downtown",
         "au centre-ville",
         "en bas de la ville",
         "Centre-ville, always with the hyphen.",
     ),
-    f(
+    fr(
         Topic.PLACE,
         "sur la rue Saint-Denis",
         "on Saint-Denis street",
         "under Saint-Denis street",
         "Québec says sur la rue, France says dans la rue.",
     ),
-    f(
+    en(
         Topic.PLACE,
         "the sidewalk",
         "le trottoir",
         "le côté chemin",
         "Trottoir everywhere in the francophone world.",
     ),
-    f(
+    fr(
         Topic.PLACE,
         "il faut que je passe à la banque",
         "I have to stop by the bank",
         "I have to pass the bank test",
         "passer à + place is to swing by.",
     ),
-    f(
+    en(
         Topic.PLACE,
         "the checkout line is long",
         "la file est longue à la caisse",
@@ -181,210 +181,210 @@ internal val frPlace: List<Question> = listOf(
 
 internal val frQuebec: List<Question> = listOf(
 
-    f(
+    fr(
         Topic.QUEBEC,
         "tu peux-tu m'aider?",
         "can you help me?",
         "can you help yourself?",
         "The extra tu is a Québec question marker, not a second you.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "c'est plate",
         "it's boring",
         "it's flat ground",
         "One of the most used Québec adjectives. Also that's too bad.",
     ),
-    f(
+    en(
         Topic.QUEBEC,
         "that's awesome",
         "c'est le fun",
         "c'est de le fun",
         "C'est le fun, with le. Also ben l'fun in speech.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "ben",
         "well / really",
         "good",
         "Ben is the spoken bien. Ben correct means really fine.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "pantoute",
         "not at all",
         "everywhere",
         "From pas en tout. Answers a question with a hard no.",
     ),
-    f(
+    en(
         Topic.QUEBEC,
         "I'm fed up",
         "je suis tanné",
         "je suis tannant",
         "Tannant means annoying. Tanné is how you feel.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "il est achalant",
         "he's annoying",
         "he's busy",
         "Achalandé is the one about a place being busy.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "je capote",
         "I'm freaking out",
         "I'm calm",
         "Works for excitement and panic alike. Tone decides.",
     ),
-    f(
+    en(
         Topic.QUEBEC,
         "he's stubborn",
         "il est têtu",
         "il est têté",
         "Têtu is standard and understood everywhere.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "c'est tiguidou",
         "it's all good",
         "it's tricky",
         "Old school Québec for everything is set.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "avoir de la misère",
         "to struggle with something",
         "to be poor",
         "J'ai de la misère à dormir, I'm having trouble sleeping.",
     ),
-    f(
+    en(
         Topic.QUEBEC,
         "I'm mixed up",
         "je suis mêlé",
         "je suis mélangeant",
         "Mêlé is confused. Mêlant describes the confusing thing.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "ça a pas d'allure",
         "that makes no sense",
         "that has no speed",
         "Avoir de l'allure is to be sensible in Québec.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "être dans le jus",
         "to be swamped",
         "to be soaked",
         "Je suis dans le jus is the informal version of débordé.",
     ),
-    f(
+    en(
         Topic.QUEBEC,
         "to trip / stumble",
         "s'enfarger",
         "se trébucher",
         "S'enfarger is Québec, trébucher standard, but never reflexive.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "c'est de valeur",
         "that's a shame",
         "it's valuable",
         "A very Québec way of saying too bad.",
     ),
-    f(
+    en(
         Topic.QUEBEC,
         "why? (very casual)",
         "à cause?",
         "pour cause?",
         "À cause? on its own is the Québec spoken why.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "asteure",
         "now",
         "at the hour",
         "From à cette heure. Common in relaxed speech.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "je suis en amour avec",
         "I'm in love with",
         "I'm in the mood for",
         "A Québec calque. France says amoureux de.",
     ),
-    f(
+    en(
         Topic.QUEBEC,
         "that's expensive as hell",
         "c'est don' cher",
         "c'est trop de cher",
         "Don' is the spoken donc, used for emphasis.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "faque",
         "so",
         "fake",
         "The crushed form of ça fait que. It starts half of all sentences.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "mets-en!",
         "you bet!",
         "put some in",
         "An enthusiastic agreement, literally put some in.",
     ),
-    f(
+    en(
         Topic.QUEBEC,
         "it's freezing out",
         "il fait frette",
         "il fait froidure",
         "Frette is the Québec pronunciation of froid, used for real cold.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "une job",
         "a job (feminine in Québec)",
         "a job (masculine)",
         "Québec says une job. France says un job.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "j'ai pogné le bus",
         "I caught the bus",
         "I missed the bus",
         "Pogner is Québec for to catch or grab. Missing it is manquer.",
     ),
-    f(
+    en(
         Topic.QUEBEC,
         "to hang out with friends",
         "chiller avec des amis",
         "chillir avec des amis",
         "Borrowed and conjugated as a regular er verb.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "ça goûte bon",
         "it tastes good",
         "it smells good",
         "Québec uses goûter this way. Smelling good is ça sent bon.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "un breuvage",
         "a drink",
         "a brewery",
         "Québec uses breuvage for any beverage. France finds it odd.",
     ),
-    f(
+    en(
         Topic.QUEBEC,
         "watch out!",
         "fais attention!",
         "fais attentif!",
         "faire attention à is the fixed chunk for being careful.",
     ),
-    f(
+    fr(
         Topic.QUEBEC,
         "c'est ben correct",
         "that's totally fine",

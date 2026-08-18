@@ -21,6 +21,7 @@ class QuizViewModel(app: Application) : AndroidViewModel(app) {
 
     private val store = QuizStore(app)
     private val haptics = Haptics(app)
+    private val speech = Speech(app)
     private val rng = Random(SystemClock.elapsedRealtimeNanos())
     private val queues = Lane.entries.associateWith { ArrayDeque<Int>() }
 
@@ -60,6 +61,7 @@ class QuizViewModel(app: Application) : AndroidViewModel(app) {
             store.markMastered(question.id)
             verdict = Verdict.RIGHT
             haptics.right()
+            sayFrench()
             autoAdvance = viewModelScope.launch {
                 delay(RIGHT_HOLD_MS)
                 advance()
@@ -68,6 +70,7 @@ class QuizViewModel(app: Application) : AndroidViewModel(app) {
             store.markMissed(question.id)
             verdict = Verdict.WRONG
             haptics.wrong()
+            sayFrench()
             requeue(currentIndex)
         }
     }
@@ -95,6 +98,19 @@ class QuizViewModel(app: Application) : AndroidViewModel(app) {
         }
         advance()
     }
+
+    val canSpeak: Boolean get() = speech.ready && question.speak != null
+
+    val speakUnlocked: Boolean get() = question.speakableUnanswered || verdict != Verdict.NONE
+
+    fun say() {
+        question.speak?.let { if (speakUnlocked) speech.say(it) }
+    }
+
+    override fun onCleared() = speech.shutdown()
+
+    // On the reveal because a right answer advances itself, and that is the only chance to hear it.
+    private fun sayFrench() = question.speak?.let(speech::say)
 
     val accuracy: Int get() = if (asked == 0) 0 else right * 100 / asked
 
