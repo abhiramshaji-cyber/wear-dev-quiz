@@ -54,3 +54,11 @@ export ANDROID_HOME=/opt/homebrew/share/android-commandlinetools
 ./gradlew assembleDebug
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
+
+## Contributing
+
+Issues and pull requests are welcome. New questions in either lane are the most welcome contribution. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Licence
+
+MIT. See [LICENSE](LICENSE).
